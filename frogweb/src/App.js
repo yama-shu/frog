@@ -1,6 +1,9 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Home from './Home.js';
+import Linebot from './linebot.js'; // './' は同じフォルダ内のファイルを示す
+import Discordbot from './discord.js';
+
 
 function App() {
   return (
@@ -8,8 +11,9 @@ function App() {
       <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/*" element={<>Not Found</>} />
-        
+        <Route path="/linebot" element={<Linebot />} />
+        <Route path="/discordbot" element={<Discordbot />} />
+
       </Routes>
     </BrowserRouter>
     
