@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Home from './Home.js';
-import Linebot from './linebot.js'; // './' は同じフォルダ内のファイルを示す
-import Discordbot from './discord.js';
+import Linebot from './linebot'; // './' は同じフォルダ内のファイルを示す
+import Discordbot from './discord';
 
 
 function App() {
