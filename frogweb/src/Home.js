@@ -1,61 +1,76 @@
 import React from "react";
-import { Stack } from "@mui/material"; // MUIからButtonとStackをインポート
-import { useNavigate } from "react-router-dom"; // ページ遷移用
-import lineIcon from './img/lineicon.png'; // Lineのアイコン画像
-import discordIcon from './img/discordicon.png'; // Discordのアイコン画像
-import frogIcon from './img/frogicon.png'; // 蛙化判定Botのアイコン
+import { Stack } from "@mui/material";
+import { useNavigate } from "react-router-dom";
+import lineIcon from './img/lineicon.png';
+import discordIcon from './img/discordicon.png';
+import frogIcon from './img/frogicon-removebg.png';
+import './Home.css';
 
 function Home() {
-    const navigate = useNavigate(); // useNavigateフックを使用してページ遷移を実現
+    const navigate = useNavigate();
 
-    // Linebotへの遷移をハンドルする関数
     const handleLinebotClick = () => {
-        navigate('/linebot'); // "/linebot" ページに遷移
+        navigate('/linebot');
     };
 
-    // Discordbotへの遷移をハンドルする関数
     const handleDiscordbotClick = () => {
-        navigate('/discordbot'); // "/discordbot" ページに遷移
+        navigate('/discordbot');
     };
 
     return (
         <div style={{ textAlign: "center", padding: "20px" }}>
-            {/* タイトル */}
-            <div style={{ textAlign: "center", padding: "30px", backgroundColor: "#42B138" }}>
-                <h1 className="title">蛙化判定Bot</h1>
-
-                {/* アイコンの画像 */}
-                <img
-                    src={frogIcon} // 蛙化判定Botの画像
-                    alt="Frog Icon"
-                    style={{ width: "150px", height: "150px", marginBottom: "20px" }}
-                />
+            {/* 蛙化Botの背景セクション */}
+            <div className="background-section" style={{ backgroundColor: "#42B138" }}>
+                <Stack direction="column" alignItems="center">
+                    {/* テキストに背景色を付けるためのラッパー要素 */}
+                    <div 
+                        style={{ 
+                            backgroundColor: "#FFF3DE", 
+                            padding: "1px 0px", // 縦のpaddingを少なく、横は0で中央配置
+                            width: "100%", // 横幅いっぱいにする
+                            display: "flex", 
+                            justifyContent: "center" 
+                        }}
+                    >
+                        <h1 className="frog-title">蛙化判定Bot</h1>
+                    </div>
+                    <img
+                        src={frogIcon}
+                        alt="Frog Icon"
+                        className="frog-icon" // アイコンのクラス
+                    />
+                </Stack>
             </div>
 
-            {/* ボタンを並べる */}
-            <Stack direction="row" spacing={6} justifyContent="center">
-                <h2 className="title">LIENBot</h2>
-                <h2 className="title">DiscordBot</h2>
-            </Stack>
+            {/* LinebotとDiscordbotの横並びセクション */}
+            <div className="background-section-horizontal">
+                <Stack direction="row" justifyContent="center" alignItems="center" spacing={4}>
+                    {/* Linebotのアイコンとテキスト */}
+                    <div className="icon-container">
+                        <h2 className="title">LIENBot</h2>
+                        <img
+                            src={lineIcon}
+                            alt="Line Icon"
+                            className="icon-image"
+                            onClick={handleLinebotClick}
+                        />
+                    </div>
 
-            <Stack direction="row" spacing={2} justifyContent="center">
+                    {/* 区切りを作成（白色の背景） */}
+                    <div className="divider"></div>
 
-                {/* Linebotのアイコンをクリックでページ遷移 */}
-                <img
-                    src={lineIcon}
-                    alt="Line Icon"
-                    style={{ width: "150px", height: "150px", marginBottom: "20px", cursor: "pointer" }} // cursor: pointerでクリック可能を示す
-                    onClick={handleLinebotClick} // クリック時にLinebotのページへ遷移
-                />
-
-                {/* Discordbotのアイコンをクリックでページ遷移 */}
-                <img
-                    src={discordIcon}
-                    alt="Discord Icon"
-                    style={{ width: "150px", height: "150px", marginBottom: "20px", cursor: "pointer" }} // cursor: pointerでクリック可能を示す
-                    onClick={handleDiscordbotClick} // クリック時にDiscordbotのページへ遷移
-                />
-            </Stack>
+                    {/* Discordbotのアイコンとテキスト */}
+                    <div className="icon-container">
+                        <h2 className="title">DiscordBot</h2>
+                        <img
+                            src={discordIcon}
+                            alt="Discord Icon"
+                            className="icon-image"
+                            onClick={handleDiscordbotClick}
+                        />
+                    </div>
+                </Stack>
+            </div>
         </div>
     );
 }
