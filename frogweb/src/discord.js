@@ -55,7 +55,12 @@ function Discordbot() {
                     </Stack>
                 </div>
                 <div>
-                    <Button className="Button" variant="contained" color="primary" onClick={handleClickOpen} style={{ margin: "20px" }}>
+                    <Button
+                        className="Button"
+                        variant="contained"
+                        onClick={handleClickOpen}
+                        style={{ backgroundColor: "rgb(66, 177, 56)", color: "white", margin: "20px" }}
+                    >
                         Discordbotを始める
                     </Button>
 

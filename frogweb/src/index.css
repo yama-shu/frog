@@ -11,7 +11,7 @@ body {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .Button {
-  background-color: #5865F2;
+  background-color: rgb(66, 177, 56);
   /* 修正: プロパティ名を小文字に変更 */
   color: white;
   padding: 10px 20px;
@@ -37,7 +37,7 @@ body {
 
 }
 .dicordButton {
-  background-color: #5865F2; /* 修正: プロパティ名を小文字に変更 */
+  background-color: rgb(66, 177, 56); /* 修正: プロパティ名を小文字に変更 */
   color: white;
   padding: 10px 20px;
   font-size: 16px;
