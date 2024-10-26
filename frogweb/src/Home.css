@@ -47,7 +47,7 @@ body {
   height: auto; /* アスペクト比を保つために自動設定 */
   max-width: 300px; /* 画像の最大サイズを300pxに調整 */
   min-width: 100px; /* 画像の最小サイズを100pxに設定 */
-  border-radius: 56px; /* 画像の角を15pxの丸みにする */
+  border-radius: 75px; /* 画像の角を15pxの丸みにする */
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* シャドウの追加 */
   cursor: pointer; /* カーソルを手のマークに変更 */
 }
