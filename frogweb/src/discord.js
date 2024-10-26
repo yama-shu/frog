@@ -6,6 +6,7 @@ import demoMovie from './videos/demo_movie.mov'; // 動画ファイルをイン�
 import './bot_title.css'; // CSSファイルのインポート
 import { Dialog, DialogTitle, DialogContent, DialogActions, Button } from "@mui/material";
 import { useState } from "react";
+import discord_QR from "./img/discord_QR.png";
 
 
 function Discordbot() {
@@ -22,7 +23,7 @@ function Discordbot() {
 
     // クリップボードにコピーする関数
     const handleCopy = () => {
-        navigator.clipboard.writeText("id")
+        navigator.clipboard.writeText("https://discord.com/oauth2/authorize?client_id=1297556251953201233")
             .then(() => {
                 alert("IDがコピーされました！");
             })
@@ -61,8 +62,8 @@ function Discordbot() {
                     <Dialog open={open} onClose={handleClose}>
                         <DialogTitle>Discordbotへようこそ</DialogTitle>
                         <DialogContent>
-                            <h4>ID: あああああああああああああああああ</h4>
-                            <img className="frogimg" src={frog} alt="Discord Icon" /> {/*QRコードの写真をつける */}
+                            <h4>ID: https://discord.com/oauth2/authorize?client_id=1297556251953201233</h4>
+                            <img className="frogimg" src={discord_QR} alt="Discord Icon" /> {/*QRコードの写真をつける */}
                         </DialogContent>
                         <DialogActions>
                             <Button onClick={handleCopy} color="primary">

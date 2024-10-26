@@ -6,6 +6,7 @@ import { Stack } from "@mui/material";
 import './bot_title.css'; // CSSファイルのインポート
 import { Dialog, DialogTitle, DialogContent, DialogActions, Button } from "@mui/material";
 import { useState } from "react";
+import line_QR from "./img/line_QR.png";
 
 function Linebot() {
     const [open, setOpen] = useState(false);
@@ -60,7 +61,7 @@ function Linebot() {
                     <DialogTitle>Linebotへようこそ</DialogTitle>
                     <DialogContent>
                         <h4>ID: あああああああああああああああああ</h4>
-                        <img className="frogimg" src={frog} alt="Discord Icon" /> {/*QRコードの写真をつける */}
+                        <img className="frogimg" src={line_QR} alt="Discord Icon" /> {/*QRコードの写真をつける */}
                     </DialogContent>
                     <DialogActions>
                         <Button onClick={handleCopy} color="primary">
