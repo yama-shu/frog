@@ -21,7 +21,8 @@ body {
   justify-content: center; /* 水平方向の中央揃え */
   align-items: center; /* 垂直方向の中央揃え */
   background-color: #FFF3DE;
-  height: 50vh; /* 画面全体の高さをスマホ用に設定 */
+  min-height: 45vh; /* 最小の高さを45vhに設定 */
+  max-height: 100vh; /* 最大の高さを100vhに設定 */
   width: 100%; /* 横幅を画面全体に設定 */
   position: relative; /* 相対位置指定 */
 }
@@ -29,23 +30,23 @@ body {
 /* 画面の幅が768px以上の場合（PC用） */
 @media (min-width: 768px) {
   .background-section-horizontal {
-    height: 35vh; /* PC画面の高さを35vhに設定 */
+    min-height: 60vh; /* PC画面の高さを60vhに設定 */
   }
 }
 
 /* 画面の幅が1024px以上の場合（大型PC用） */
 @media (min-width: 1024px) {
   .background-section-horizontal {
-    height: 70vh; /* 大型PCの高さを30vhに設定 */
+    min-height: 70vh; /* 大型PCの高さを70vhに設定 */
   }
 }
 
 /* アイコンとテキストの共通スタイル */
 .icon-image {
-  width: 30vw; /* ビューポートの幅の30%に設定してサイズを拡大 */
+  width: 25vw; /* ビューポートの幅の25%に設定してサイズを縮小 */
   height: auto; /* アスペクト比を保つために自動設定 */
-  max-width: 400px; /* 画像の最大サイズを増加 */
-  min-width: 150px; /* 画像の最小サイズを増加 */
+  max-width: 300px; /* 画像の最大サイズを300pxに調整 */
+  min-width: 100px; /* 画像の最小サイズを100pxに設定 */
 }
 
 /* 蛙化判定Botのテキストスタイル */
@@ -74,7 +75,6 @@ body {
   text-align: center; /* テキストを中央揃え */
 }
 
-
 .LineButton {
   background-color: #5865F2; /* 修正: プロパティ名を小文字に変更 */
   color: white;
@@ -84,6 +84,7 @@ body {
   border: none;
   cursor: pointer;
 }
+
 .dicordButton {
   background-color: #5865F2; /* 修正: プロパティ名を小文字に変更 */
   color: white;
@@ -92,5 +93,4 @@ body {
   border-radius: 5px;
   border: none;
   cursor: pointer;
-
 }
