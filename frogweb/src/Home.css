@@ -37,7 +37,7 @@ body {
 /* 画面の幅が1024px以上の場合（大型PC用） */
 @media (min-width: 1024px) {
   .background-section-horizontal {
-    min-height: 70vh; /* 大型PCの高さを70vhに設定 */
+    min-height: 75vh; /* 大型PCの高さを70vhに設定 */
   }
 }
 
