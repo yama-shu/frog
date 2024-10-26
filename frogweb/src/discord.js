@@ -3,7 +3,7 @@ import frog from './img/frog.png'; // Discordのアイコン画像
 import Header from "./Header"; // ヘッダーコンポーネントをインポート
 import { Stack } from "@mui/material"; // MUIからButtonとStackをインポート
 import demoMovie from './videos/demo_movie.mov'; // 動画ファイルをインポート
-import './Linebot.css'; // CSSファイルのインポート
+import './bot_title.css'; // CSSファイルのインポート
 import { Dialog, DialogTitle, DialogContent, DialogActions, Button } from "@mui/material";
 import { useState } from "react";
 
