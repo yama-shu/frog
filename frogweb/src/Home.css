@@ -1,0 +1,96 @@
+/* 全体の背景色 */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #42B138;
+}
+
+/* 蛙化BotとLinebot, Discordbotのセクションのスタイル */
+.background-section {
+  padding: 30px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* LinebotとDiscordbotの横並びセクションのスタイル */
+.background-section-horizontal {
+  display: flex;
+  justify-content: center; /* 水平方向の中央揃え */
+  align-items: center; /* 垂直方向の中央揃え */
+  background-color: #FFF3DE;
+  height: 50vh; /* 画面全体の高さをスマホ用に設定 */
+  width: 100%; /* 横幅を画面全体に設定 */
+  position: relative; /* 相対位置指定 */
+}
+
+/* 画面の幅が768px以上の場合（PC用） */
+@media (min-width: 768px) {
+  .background-section-horizontal {
+    height: 35vh; /* PC画面の高さを35vhに設定 */
+  }
+}
+
+/* 画面の幅が1024px以上の場合（大型PC用） */
+@media (min-width: 1024px) {
+  .background-section-horizontal {
+    height: 70vh; /* 大型PCの高さを30vhに設定 */
+  }
+}
+
+/* アイコンとテキストの共通スタイル */
+.icon-image {
+  width: 30vw; /* ビューポートの幅の30%に設定してサイズを拡大 */
+  height: auto; /* アスペクト比を保つために自動設定 */
+  max-width: 400px; /* 画像の最大サイズを増加 */
+  min-width: 150px; /* 画像の最小サイズを増加 */
+}
+
+/* 蛙化判定Botのテキストスタイル */
+.frog-title {
+  font-size: 6vw; /* ビューポートの幅の6%を基にフォントサイズを設定 */
+  max-font-size: 80px; /* 最大フォントサイズを80pxに設定 */
+  min-font-size: 28px; /* 最小フォントサイズを28pxに設定 */
+  text-align: center; /* テキストを中央揃え */
+  width: 100%; /* 蛙アイコンの横幅に収める */
+}
+
+
+/* 蛙化判定Botのアイコンのスタイル */
+.frog-icon {
+  width: 50vh; /* 画面の高さの50%を使用 */
+  height: auto; /* アスペクト比を保ちながら自動で高さ調整 */
+  max-width: 100%; /* 横幅が画面幅を超えないように最大幅を設定 */
+}
+
+
+/* テキストのサイズを相対的に設定 */
+.title {
+  font-size: 5vw; /* ビューポートの幅の5%に基づいたフォントサイズを設定 */
+  max-font-size: 60px; /* フォントの最大サイズを60pxに拡大 */
+  min-font-size: 20px; /* フォントの最小サイズを20pxに設定 */
+  text-align: center; /* テキストを中央揃え */
+}
+
+
+.LineButton {
+  background-color: #5865F2; /* 修正: プロパティ名を小文字に変更 */
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+.dicordButton {
+  background-color: #5865F2; /* 修正: プロパティ名を小文字に変更 */
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+
+}
