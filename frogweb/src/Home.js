@@ -3,7 +3,7 @@ import { Stack } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import lineIcon from './img/lineicon.png';
 import discordIcon from './img/discordicon.png';
-import frogIcon from './img/image.png';
+import frogIcon from './img/image1.png';
 import './Home.css';
 
 function Home() {
@@ -16,19 +16,28 @@ function Home() {
     const handleDiscordbotClick = () => {
         navigate('/discordbot');
     };
+    // const text = "あなたは知らぬ間に蛙化しているかもしれません";
+    // const modifiedText = text.replace("蛙化", "蛙化<br>");
 
     return (
         <div style={{ textAlign: "center", padding: "1px" }}>
+
             {/* 蛙化Botの背景セクション */}
             <div className="background-section" style={{ backgroundColor: "#42B138" }}>
                 <Stack direction="column" alignItems="center">
-                    {/* テキストに背景色を付けるためのラッパー要素 */}
-                   
+                    {/* 画像を背景に配置 */}
+                    {/* 段差のある俳句風テキスト */}
+                    <h2 className="home_txt">
+                        <span className="haiku-line">あなたも知らぬ間に</span>
+                        <span className="haiku-line">蛙化しているかも</span>
+
+                    </h2>
                     <img
                         src={frogIcon}
                         alt="Frog Icon"
-                        className="frog-icon" // アイコンのクラス
+                        className="frog-icon"
                     />
+
                 </Stack>
             </div>
 

@@ -5,7 +5,11 @@ body {
   font-family: Arial, sans-serif;
   
 }
-
+.home_txt {
+  font-family: "MS Mincho", "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", serif; /* 明朝体フォントを指定 */
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+}
 /* 蛙化BotとLinebot, Discordbotのセクションのスタイル */
 .background-section {
   padding: 30px;
@@ -89,7 +93,7 @@ body {
 .frog-icon {
   width: 50vh; /* 画面の高さの50%を使用 */
   height: auto; /* アスペクト比を保ちながら自動で高さ調整 */
-  max-width: 100%; /* 横幅が画面幅を超えないように最大幅を設定 */
+  max-width: 150%; /* 横幅が画面幅を超えないように最大幅を設定 */
 }
 
 
@@ -140,4 +144,17 @@ body {
   border-radius: 5px;
   border: none;
   cursor: pointer;
+}
+
+.haiku-line {
+  display: block; /* 各行をブロック要素にする */
+  text-indent: 1em; /* インデントの基本設定 */
+}
+
+.haiku-line:nth-child(1) {
+  text-indent: 0; /* 最初の行はインデントなし */
+}
+
+.haiku-line:nth-child(2) {
+  text-indent: 6em; /* 2番目の行にインデントを追加 */
 }

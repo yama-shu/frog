@@ -53,8 +53,13 @@ function Linebot() {
             </div>
 
             <div>
-                <Button className="Button" variant="contained" color="primary" onClick={handleClickOpen} style={{ margin: "20px" }}>
-                    LIENBotを始める
+                <Button
+                    className="Button"
+                    variant="contained"
+                    onClick={handleClickOpen}
+                    style={{ backgroundColor: "rgb(66, 177, 56)", color: "white", margin: "20px" }}
+                >
+                    LIENbotを始める
                 </Button>
 
                 <Dialog open={open} onClose={handleClose}>
