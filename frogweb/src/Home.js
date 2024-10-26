@@ -3,7 +3,7 @@ import { Stack } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import lineIcon from './img/lineicon.png';
 import discordIcon from './img/discordicon.png';
-import frogIcon from './img/frogicon-removebg.png';
+import frogIcon from './img/image.png';
 import './Home.css';
 
 function Home() {
@@ -18,22 +18,12 @@ function Home() {
     };
 
     return (
-        <div style={{ textAlign: "center", padding: "20px" }}>
+        <div style={{ textAlign: "center", padding: "1px" }}>
             {/* 蛙化Botの背景セクション */}
             <div className="background-section" style={{ backgroundColor: "#42B138" }}>
                 <Stack direction="column" alignItems="center">
                     {/* テキストに背景色を付けるためのラッパー要素 */}
-                    <div 
-                        style={{ 
-                            backgroundColor: "#FFF3DE", 
-                            padding: "1px 0px", // 縦のpaddingを少なく、横は0で中央配置
-                            width: "100%", // 横幅いっぱいにする
-                            display: "flex", 
-                            justifyContent: "center" 
-                        }}
-                    >
-                        <h1 className="frog-title">蛙化判定Bot</h1>
-                    </div>
+                   
                     <img
                         src={frogIcon}
                         alt="Frog Icon"

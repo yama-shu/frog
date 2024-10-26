@@ -3,7 +3,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  background-color: #42B138;
+  
 }
 
 /* 蛙化BotとLinebot, Discordbotのセクションのスタイル */
@@ -47,9 +47,29 @@ body {
   height: auto; /* アスペクト比を保つために自動設定 */
   max-width: 300px; /* 画像の最大サイズを300pxに調整 */
   min-width: 100px; /* 画像の最小サイズを100pxに設定 */
-  border-radius: 75px; /* 画像の角を15pxの丸みにする */
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* シャドウの追加 */
   cursor: pointer; /* カーソルを手のマークに変更 */
+}
+
+/* スマートフォン用の角丸設定 */
+@media (max-width: 480px) {
+  .icon-image {
+    border-radius: 25px; /* スマホでの角丸を小さく設定 */
+  }
+}
+
+/* タブレット用の角丸設定 */
+@media (min-width: 481px) and (max-width: 768px) {
+  .icon-image {
+    border-radius: 45px; /* タブレット用に角丸を調整 */
+  }
+}
+
+/* PC用の角丸設定 */
+@media (min-width: 769px) {
+  .icon-image {
+    border-radius: 75px; /* PCでの角丸を指定 */
+  }
 }
 
 
