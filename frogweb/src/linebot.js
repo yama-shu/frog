@@ -1,28 +1,82 @@
 import React from "react";
-import frog from './img/forg.png'; // Discordのアイコン画像
-import { Stack } from "@mui/material"; // MUIからButtonとStackをインポート
-function Linebot() {
-  return (
-    <div>
-    <div>
-        <h1>Linebot</h1>
-        <div>
-            <Stack direction="row" spacing={6} justifyContent="center">
-                <h2 className="title">デモ動画</h2>
-                <h2 className="title">説明</h2>
-            </Stack>
-        </div>
-        <button className="dicordButton"> Linebotを始める </button>
-    </div>
-    {/* ボタンの追加 */}
+import frog from './img/frog.png';
+import Header from "./Header";
+import demoMovie from './videos/demo_movie.mov'; // 動画ファイルをインポート
+import { Stack } from "@mui/material";
+import './Linebot.css'; // CSSファイルのインポート
+import { Dialog, DialogTitle, DialogContent, DialogActions, Button } from "@mui/material";
+import { useState } from "react";
 
-    <img
-        src={frog}
-        alt="Discord Icon"
-        style={{ width: "300px", height: "300px", marginBottom: "20px", cursor: "pointer" }} // cursor: pointerでクリック可能を示す
-    />
-</div>
-  );
+function Linebot() {
+    const [open, setOpen] = useState(false);
+
+    // ダイアログの開閉を制御する関数
+    const handleClickOpen = () => {
+        setOpen(true);
+    };
+
+    const handleClose = () => {
+        setOpen(false);
+    };
+
+    // クリップボードにコピーする関数
+    const handleCopy = () => {
+        navigator.clipboard.writeText("id")
+            .then(() => {
+                alert("IDがコピーされました！");
+            })
+            .catch(err => {
+                console.error("コピーに失敗しました: ", err);
+            });
+    };
+    return (
+        <div>
+            <Header /> {/* ヘッダーを追加 */}
+            <h1 className="cute-title">Linebot</h1> {/* フォントを可愛くしたい部分 */}
+            <div>
+                <Stack direction="row" spacing={6} justifyContent="center" style={{ marginLeft: "20px", marginRight: "20px" }}>
+                    {/* 動画を追加 */}
+                    <video
+                        className="demo_line_movie"
+                        src={demoMovie} // 動画ファイル
+                        controls // 再生コントロールを表示
+                        width="100%" // 動画の幅
+                        height="300" // 動画の高さ
+                        alt="Demo Movie"
+                    />
+                    <h4 className="LEIN_Description">
+                        Linebotは、会話中に特定の発言があった際、即座に反応し、蛙化判定を行います。
+                        メッセージが検出されると、自動で『それ蛙化だよ！』と通知し、蛙化度合いをパーセンテージで表示します。
+                    </h4>
+                </Stack>
+            </div>
+
+            <div>
+                <Button className="Button" variant="contained" color="primary" onClick={handleClickOpen} style={{ margin: "20px" }}>
+                    LIENBotを始める
+                </Button>
+
+                <Dialog open={open} onClose={handleClose}>
+                    <DialogTitle>Linebotへようこそ</DialogTitle>
+                    <DialogContent>
+                        <h4>ID: あああああああああああああああああ</h4>
+                        <img className="frogimg" src={frog} alt="Discord Icon" /> {/*QRコードの写真をつける */}
+                    </DialogContent>
+                    <DialogActions>
+                        <Button onClick={handleCopy} color="primary">
+                            IDをコピー
+                        </Button>
+                        <Button onClick={handleClose} color="primary">
+                            閉じる
+                        </Button>
+                    </DialogActions>
+                </Dialog>
+            </div>
+
+            <img className="frogimg" src={frog} alt="Discord Icon" />
+
+        </div>
+    );
 }
 
 export default Linebot;
