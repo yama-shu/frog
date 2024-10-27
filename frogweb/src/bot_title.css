@@ -9,7 +9,7 @@
 
 /* Discordbotの説明テキストのスタイル */
 .Discord_Description {
-    font-size: 3.5vw; /* ビューポートの幅の3.5%を基にフォントサイズを設定 */
+    font-size: 2.8vw; /* ビューポートの幅の3.5%を基にフォントサイズを設定 */
     max-font-size: 32px; /* PC用に最大フォントサイズを32pxに設定（見やすくしました） */
     min-font-size: 20px; /* 最小フォントサイズを20pxに設定 */
     line-height: 1.6; /* 行間を調整して読みやすく */
@@ -19,7 +19,7 @@
 
 /* Linebotの説明テキストのスタイル */
 .Line_Description {
-    font-size: 3.5vw; /* ビューポートの幅の3.5%を基にフォントサイズを設定 */
+    font-size: 2.8vw; /* ビューポートの幅の3.5%を基にフォントサイズを設定 */
     max-font-size: 32px; /* PC用に最大フォントサイズを32pxに設定 */
     min-font-size: 20px; /* 最小フォントサイズを20pxに設定 */
     line-height: 1.6; /* 行間を調整して読みやすく */
