@@ -82,7 +82,7 @@ app.listen(port, async () => {
 
 async function createAiResponse(userMessage) {
   const completion = await openai.chat.completions.create({
-    model: "ft:gpt-4o-mini-2024-07-18:personal::AMfHgZWZ",
+    model: process.env.OPENAI_MODEL,
     messages: [
         { role: "system", content: "蛙化現象の判定を行ってください。" },
         {
