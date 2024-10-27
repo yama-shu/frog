@@ -45,7 +45,7 @@ function Home() {
                 <Stack direction="row" justifyContent="center" alignItems="center" spacing={4}>
                     {/* Linebotのアイコンとテキスト */}
                     <div className="icon-container">
-                        <h2 className="title">LIENBot</h2>
+                        <h2 className="title">LINEBot</h2>
                         <img
                             src={lineIcon}
                             alt="Line Icon"

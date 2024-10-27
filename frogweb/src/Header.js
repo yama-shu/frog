@@ -14,7 +14,7 @@ function Header() {
         <header className="header">
             <div className="header-content" onClick={handleHomeClick} style={{ cursor: "pointer" }}>
                 {/* 　<img src={logoIcon} alt="Logo Icon" className="header-icon" /> アイコンを追加 */}
-                <h1 className="header-title">蛙化判定Bot フローティーくん</h1>
+                <h1 className="header-title">フロッティーくん</h1>
             </div>
         </header>
     );

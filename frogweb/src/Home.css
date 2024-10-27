@@ -5,6 +5,7 @@ body {
   font-family: Arial, sans-serif;
   
 }
+
 .home_txt {
   font-family: "MS Mincho", "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", serif; /* 明朝体フォントを指定 */
   -ms-writing-mode: tb-rl;
@@ -99,6 +100,7 @@ body {
 
 /* テキストのサイズを相対的に設定 */
 .title {
+  font-family: 'Comic Sans MS';
   font-size: 5vw; /* ビューポートの幅の5%に基づいたフォントサイズを設定 */
   max-font-size: 60px; /* フォントの最大サイズを60pxに拡大 */
   min-font-size: 20px; /* フォントの最小サイズを20pxに設定 */
