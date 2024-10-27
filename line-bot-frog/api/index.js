@@ -7,7 +7,11 @@ const OpenAI = require("openai");
 
 const app = express();
 
-const openai = new OpenAI();
+const openai = new OpenAI({
+    organization: process.env.OPENAI_ORG,
+    project: process.env.OPENAI_PROJECT_ID,
+  }
+);
 
 const config = {
   channelAccessToken: process.env.CHANNEL_ACCESS_TOKEN,
