@@ -20,16 +20,17 @@ function Linebot() {
         setOpen(false);
     };
 
-    // クリップボードにコピーする関数
-    const handleCopy = () => {
-        navigator.clipboard.writeText("id")
-            .then(() => {
-                alert("IDがコピーされました！");
-            })
-            .catch(err => {
-                console.error("コピーに失敗しました: ", err);
-            });
-    };
+    // // クリップボードにコピーする関数
+    // const handleCopy = () => {
+    //     navigator.clipboard.writeText("id")
+    //         .then(() => {
+    //             alert("IDがコピーされました！");
+    //         })
+    //         .catch(err => {
+    //             console.error("コピーに失敗しました: ", err);
+    //         });
+    // };
+
     return (
         <div>
             <Header /> {/* ヘッダーを追加 */}
@@ -57,7 +58,7 @@ function Linebot() {
                     className="Button"
                     variant="contained"
                     onClick={handleClickOpen}
-                    style={{ backgroundColor: "rgb(66, 177, 56)", color: "white", margin: "20px" }}
+                    style={{ backgroundColor: "rgb(90, 145, 83)", color: "white", margin: "20px" }}
                 >
                     LIENbotを始める
                 </Button>
@@ -65,13 +66,13 @@ function Linebot() {
                 <Dialog open={open} onClose={handleClose}>
                     <DialogTitle>Linebotへようこそ</DialogTitle>
                     <DialogContent>
-                        <h4>ID: あああああああああああああああああ</h4>
+                        
                         <img className="frogimg" src={line_QR} alt="Discord Icon" /> {/*QRコードの写真をつける */}
                     </DialogContent>
                     <DialogActions>
-                        <Button onClick={handleCopy} color="primary">
+                        {/* <Button onClick={handleCopy} color="primary">
                             IDをコピー
-                        </Button>
+                        </Button> */}
                         <Button onClick={handleClose} color="primary">
                             閉じる
                         </Button>
@@ -80,6 +81,7 @@ function Linebot() {
             </div>
 
             <img className="frogimg" src={frog} alt="Discord Icon" />
+            <h5 style={{color:"#a9a9a9" }}>ヘルプ・プライバシー・利用規約</h5>
 
         </div>
     );

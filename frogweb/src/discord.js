@@ -59,7 +59,7 @@ function Discordbot() {
                         className="Button"
                         variant="contained"
                         onClick={handleClickOpen}
-                        style={{ backgroundColor: "rgb(66, 177, 56)", color: "white", margin: "20px" }}
+                        style={{ backgroundColor: "rgb(90, 145, 83)", color: "white", margin: "20px" }}
                     >
                         Discordbotを始める
                     </Button>
@@ -81,6 +81,7 @@ function Discordbot() {
                     </Dialog>
                 </div>
                 <img className="frogimg" src={frog} alt="Discord Icon" />
+                <h5 style={{color:"#a9a9a9" }}>ヘルプ・プライバシー・利用規約</h5>
 
             </div>
             {/* ボタンの追加 */}
