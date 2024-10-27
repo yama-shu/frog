@@ -49,7 +49,7 @@
     }
 
     .Discord_Description {
-        font-size: 3vw; /* タブレット用にテキストを調整 */
+        font-size: 2.2vw; /* タブレット用にテキストを調整 */
         max-font-size: 26px; /* 最大フォントサイズを26pxに設定 */
     }
 }
@@ -57,12 +57,14 @@
 /* PC用のテキストとビデオのサイズ調整 */
 @media (min-width: 1025px) {
     .Discord_Description {
-        font-size: 2.2vw; /* PC用に少し大きく */
+        font-size: 3vw; /* PC用に少し大きく */
         max-font-size: 32px; /* 最大フォントサイズを32pxに設定 */
     }
 
     .responsive-video {
-        max-height: 300px; /* PC用の縦の最大高さを300pxに制限 */
+        width: 400%; /* タブレット用に幅を画面の横半分に設定 */
+        max-width: 700px; /* 最大幅を600pxに制限 */
+        max-height: 600px; /* PC用の縦の最大高さを300pxに制限 */
     }
 }
 
@@ -98,6 +100,17 @@
         max-width: 600px; /* ボタンの最大幅を600pxに設定 */
     }
 }
+
+/* Linebotの説明テキストのスタイル */
+.Line_Description {
+    font-size: 3.5vw; /* ビューポートの幅の3.5%を基にフォントサイズを設定 */
+    max-font-size: 28px; /* 最大フォントサイズを28pxに設定（PC用に大きく） */
+    min-font-size: 18px; /* 最小フォントサイズを18pxに設定 */
+    line-height: 1.6; /* 行間を調整して読みやすく */
+    margin: 20px 0; /* 上下の余白を追加 */
+    text-align: justify; /* テキストを両端揃えに */
+}
+
 
 
 
