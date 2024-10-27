@@ -39,13 +39,12 @@ function Discordbot() {
                 <div>
                     <Stack direction="row" spacing={6} justifyContent="center" style={{ marginLeft: "20px", marginRight: "20px" }}>
                         <video
-                            className="demo_line_movie"
-                            src={demoMovie} // 動画ファイル
-                            controls // 再生コントロールを表示
-                            width="100%" // 動画の幅
-                            height="300" // 動画の高さ
+                            className="responsive-video"
+                            src={demoMovie}
+                            controls
                             alt="Demo Movie"
                         />
+
 
                         <h4 className="Discord_Description">
                             Discordbotは、サーバー内でのチャットをリアルタイムで解析します。
@@ -59,7 +58,7 @@ function Discordbot() {
                         className="Button"
                         variant="contained"
                         onClick={handleClickOpen}
-                        style={{ backgroundColor: "rgb(90, 145, 83)", color: "white", margin: "20px" }}
+                        style={{ backgroundColor: "rgb(66, 177, 56)", color: "white", margin: "20px" }}
                     >
                         Discordbotを始める
                     </Button>
@@ -81,7 +80,6 @@ function Discordbot() {
                     </Dialog>
                 </div>
                 <img className="frogimg" src={frog} alt="Discord Icon" />
-                <h5 style={{color:"#a9a9a9" }}>ヘルプ・プライバシー・利用規約</h5>
 
             </div>
             {/* ボタンの追加 */}
