@@ -1,0 +1,175 @@
+[
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "以下の会話から、蛙化現象が発生しているかどうかを判定してください。"
+      },
+      {
+        "role": "user",
+        "content": "昨日は楽しかったね！ありがとう。"
+      },
+      {
+        "role": "model",
+        "content": "こちらこそ、また一緒に出かけよう。"
+      },
+      {
+        "role": "user",
+        "content": "うん、でもちょっと忙しくなりそうだから、また連絡するね。"
+      },
+      {
+        "role": "model",
+        "content": "了解！連絡待ってるね。"
+      },
+      {
+        "role": "user",
+        "content": "うん、じゃあね。"
+      }
+    ],
+    "label": "蛙化現象発生"
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "以下の会話から、蛙化現象が発生しているかどうかを判定してください。"
+      },
+      {
+        "role": "user",
+        "content": "今日はどこに行く？"
+      },
+      {
+        "role": "model",
+        "content": "君の好きなカフェに行こうか。"
+      },
+      {
+        "role": "user",
+        "content": "いいね！楽しみ。"
+      },
+      {
+        "role": "model",
+        "content": "あと、帰りに映画も観に行かない？"
+      },
+      {
+        "role": "user",
+        "content": "うーん、今日はカフェだけでいいかな。"
+      },
+      {
+        "role": "model",
+        "content": "わかった、無理は言わないよ。"
+      }
+    ],
+    "label": "蛙化現象未発生"
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "以下の会話から、蛙化現象が発生しているかどうかを判定してください。"
+      },
+      {
+        "role": "user",
+        "content": "最近どう？"
+      },
+      {
+        "role": "model",
+        "content": "君に会えなくて寂しいよ。"
+      },
+      {
+        "role": "user",
+        "content": "そうなんだ…。"
+      },
+      {
+        "role": "model",
+        "content": "今度の週末、時間ある？"
+      },
+      {
+        "role": "user",
+        "content": "ちょっと予定が入ってて…。"
+      },
+      {
+        "role": "model",
+        "content": "そっか、残念だな。"
+      },
+      {
+        "role": "user",
+        "content": "ごめんね。"
+      }
+    ],
+    "label": "蛙化現象発生"
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "以下の会話から、蛙化現象が発生しているかどうかを判定してください。"
+      },
+      {
+        "role": "user",
+        "content": "今日のプレゼン、緊張したね。"
+      },
+      {
+        "role": "model",
+        "content": "本当に。でも君のおかげでうまくいったよ。"
+      },
+      {
+        "role": "user",
+        "content": "そんなことないよ、お互い様。"
+      },
+      {
+        "role": "model",
+        "content": "今度、一緒にご飯でもどう？"
+      },
+      {
+        "role": "user",
+        "content": "いいね、行こう！"
+      },
+      {
+        "role": "model",
+        "content": "楽しみにしてるね。"
+      },
+      {
+        "role": "user",
+        "content": "私も！"
+      }
+    ],
+    "label": "蛙化現象未発生"
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "以下の会話から、蛙化現象が発生しているかどうかを判定してください。"
+      },
+      {
+        "role": "user",
+        "content": "この前貸してくれた本、すごく面白かった！"
+      },
+      {
+        "role": "model",
+        "content": "そう？他にもおすすめがあるよ。"
+      },
+      {
+        "role": "user",
+        "content": "また教えてほしいな。"
+      },
+      {
+        "role": "model",
+        "content": "じゃあ、今度一緒に本屋に行かない？"
+      },
+      {
+        "role": "user",
+        "content": "ごめん、それはちょっと…。"
+      },
+      {
+        "role": "model",
+        "content": "無理しないで大丈夫だよ。"
+      },
+      {
+        "role": "user",
+        "content": "ありがとう。"
+      }
+    ],
+    "label": "蛙化現象発生"
+  }
+]
