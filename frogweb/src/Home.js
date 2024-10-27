@@ -5,6 +5,7 @@ import lineIcon from './img/lineicon.png';
 import discordIcon from './img/discordicon.png';
 import frogIcon from './img/image1.png';
 import './Home.css';
+import Header from "./Header"; // ヘッダーコンポーネントをインポート
 
 function Home() {
     const navigate = useNavigate();
@@ -16,11 +17,10 @@ function Home() {
     const handleDiscordbotClick = () => {
         navigate('/discordbot');
     };
-    // const text = "あなたは知らぬ間に蛙化しているかもしれません";
-    // const modifiedText = text.replace("蛙化", "蛙化<br>");
 
     return (
         <div style={{ textAlign: "center", padding: "1px" }}>
+            <Header /> {/* ヘッダーを追加 */}
 
             {/* 蛙化Botの背景セクション */}
             <div className="background-section" style={{ backgroundColor: "#42B138" }}>
@@ -30,7 +30,6 @@ function Home() {
                     <h2 className="home_txt">
                         <span className="haiku-line">あなたも知らぬ間に</span>
                         <span className="haiku-line">蛙化しているかも</span>
-
                     </h2>
                     <img
                         src={frogIcon}
