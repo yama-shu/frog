@@ -1,7 +1,7 @@
 import frog from './img/frog.png'; // Linebotのアイコン画像
 import Header from "./Header";
 import { Stack } from "@mui/material";
-import demoMovie from './videos/demo_movie.mov';
+import lineVideo from './videos/line.mov'; // Linebotの動画ファイルをインポート
 import './bot_title.css';
 import { Dialog, DialogTitle, DialogContent, DialogActions, Button } from "@mui/material";
 import { useState } from "react";
@@ -22,14 +22,14 @@ function Linebot() {
         <div>
             <div className="line-title">
                 <Header />
-                <h1 className="cute-title">Linebot</h1> {/* タイトルを元のスタイルに戻す */}
+                <h1 className="cute-title">Linebot</h1>
                 <div>
                     <Stack direction="row" spacing={6} justifyContent="center" style={{ marginLeft: "20px", marginRight: "20px" }}>
                         <video
                             className="responsive-video"
-                            src={demoMovie}
+                            src={lineVideo} // 動画ファイルを使用
                             controls
-                            alt="Demo Movie"
+                            alt="Line Demo Movie"
                         />
 
                         <h4 className="Line_Description">
@@ -43,7 +43,7 @@ function Linebot() {
                         className="Button"
                         variant="contained"
                         onClick={handleClickOpen}
-                        style={{ backgroundColor: "rgb(90, 145, 83)", color: "white", margin: "20px" }} // 色を統一
+                        style={{ backgroundColor: "rgb(90, 145, 83)", color: "white", margin: "20px" }}
                     >
                         Linebotを始める
                     </Button>

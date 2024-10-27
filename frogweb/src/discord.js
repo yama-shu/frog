@@ -1,7 +1,7 @@
 import frog from './img/frog.png'; // Discordのアイコン画像
 import Header from "./Header";
 import { Stack } from "@mui/material";
-import demoMovie from './videos/demo_movie.mov';
+import discordVideo from './videos/discord.mov'; // Discordbotの動画ファイルをインポート
 import './bot_title.css';
 import { Dialog, DialogTitle, DialogContent, DialogActions, Button } from "@mui/material";
 import { useState } from "react";
@@ -22,14 +22,14 @@ function Discordbot() {
         <div>
             <div className="discord-title">
                 <Header />
-                <h1 className="cute-title">Discordbot</h1> {/* タイトルを元のスタイルに戻す */}
+                <h1 className="cute-title">Discordbot</h1>
                 <div>
                     <Stack direction="row" spacing={6} justifyContent="center" style={{ marginLeft: "20px", marginRight: "20px" }}>
                         <video
                             className="responsive-video"
-                            src={demoMovie}
+                            src={discordVideo} // 動画ファイルを差し替え
                             controls
-                            alt="Demo Movie"
+                            alt="Discord Demo Movie"
                         />
 
                         <h4 className="Discord_Description">
@@ -44,7 +44,7 @@ function Discordbot() {
                         className="Button"
                         variant="contained"
                         onClick={handleClickOpen}
-                        style={{ backgroundColor: "rgb(90, 145, 83)", color: "white", margin: "20px" }} // 色を統一
+                        style={{ backgroundColor: "rgb(90, 145, 83)", color: "white", margin: "20px" }}
                     >
                         Discordbotを始める
                     </Button>
