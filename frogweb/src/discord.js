@@ -1,18 +1,15 @@
-import React from "react";
 import frog from './img/frog.png'; // Discordのアイコン画像
-import Header from "./Header"; // ヘッダーコンポーネントをインポート
-import { Stack } from "@mui/material"; // MUIからButtonとStackをインポート
-import demoMovie from './videos/demo_movie.mov'; // 動画ファイルをインポート
-import './bot_title.css'; // CSSファイルのインポート
+import Header from "./Header";
+import { Stack } from "@mui/material";
+import discordVideo from './videos/discord.mov'; // Discordbotの動画ファイルをインポート
+import './bot_title.css';
 import { Dialog, DialogTitle, DialogContent, DialogActions, Button } from "@mui/material";
 import { useState } from "react";
 import discord_QR from "./img/discord_QR.png";
 
-
 function Discordbot() {
     const [open, setOpen] = useState(false);
 
-    // ダイアログの開閉を制御する関数
     const handleClickOpen = () => {
         setOpen(true);
     };
@@ -21,30 +18,18 @@ function Discordbot() {
         setOpen(false);
     };
 
-    // クリップボードにコピーする関数
-    const handleCopy = () => {
-        navigator.clipboard.writeText("https://discord.com/oauth2/authorize?client_id=1297556251953201233")
-            .then(() => {
-                alert("IDがコピーされました！");
-            })
-            .catch(err => {
-                console.error("コピーに失敗しました: ", err);
-            });
-    };
     return (
         <div>
             <div className="discord-title">
-                <Header /> {/* ヘッダーを追加 */}
+                <Header />
                 <h1 className="cute-title">Discordbot</h1>
                 <div>
                     <Stack direction="row" spacing={6} justifyContent="center" style={{ marginLeft: "20px", marginRight: "20px" }}>
                         <video
-                            className="demo_line_movie"
-                            src={demoMovie} // 動画ファイル
-                            controls // 再生コントロールを表示
-                            width="100%" // 動画の幅
-                            height="300" // 動画の高さ
-                            alt="Demo Movie"
+                            className="responsive-video"
+                            src={discordVideo} // 動画ファイルを差し替え
+                            controls
+                            alt="Discord Demo Movie"
                         />
 
                         <h4 className="Discord_Description">
@@ -67,13 +52,9 @@ function Discordbot() {
                     <Dialog open={open} onClose={handleClose}>
                         <DialogTitle>Discordbotへようこそ</DialogTitle>
                         <DialogContent>
-                            <h4>ID: https://discord.com/oauth2/authorize?client_id=1297556251953201233</h4>
-                            <img className="frogimg" src={discord_QR} alt="Discord Icon" /> {/*QRコードの写真をつける */}
+                            <img className="frogimg" src={discord_QR} alt="Discord QR Code" />
                         </DialogContent>
                         <DialogActions>
-                            <Button onClick={handleCopy} color="primary">
-                                IDをコピー
-                            </Button>
                             <Button onClick={handleClose} color="primary">
                                 閉じる
                             </Button>
@@ -82,11 +63,8 @@ function Discordbot() {
                 </div>
                 <img className="frogimg" src={frog} alt="Discord Icon" />
                 <h5 style={{color:"#a9a9a9" }}>ヘルプ・プライバシー・利用規約</h5>
-
             </div>
-            {/* ボタンの追加 */}
         </div>
-
     );
 }
 

@@ -1,7 +1,92 @@
 .cute-title {
-    font-family: 'Pacifico', cursive; /* Google Fontsで指定したフォント */
-    font-size: 5.0rem; /* フォントサイズを大きく */
-    color: #000000; /* 可愛らしいピンク系の色 */
+    font-family: 'Pacifico', cursive;
+    font-size: 10vw; /* ビューポートの幅の6%を基にサイズを調整 */
+    max-font-size: 70px; /* 最大フォントサイズを70pxに設定（大きくしました） */
+    min-font-size: 30px; /* 最小フォントサイズを30pxに設定 */
+    color: #000000;
     margin: 20px 0;
 }
 
+/* Discordbotの説明テキストのスタイル */
+.Discord_Description {
+    font-size: 2.8vw; /* ビューポートの幅の3.5%を基にフォントサイズを設定 */
+    max-font-size: 32px; /* PC用に最大フォントサイズを32pxに設定（見やすくしました） */
+    min-font-size: 20px; /* 最小フォントサイズを20pxに設定 */
+    line-height: 1.6; /* 行間を調整して読みやすく */
+    margin: 20px 0; /* 上下の余白を追加 */
+    text-align: justify; /* テキストを両端揃えに */
+}
+
+/* Linebotの説明テキストのスタイル */
+.Line_Description {
+    font-size: 2.8vw; /* ビューポートの幅の3.5%を基にフォントサイズを設定 */
+    max-font-size: 32px; /* PC用に最大フォントサイズを32pxに設定 */
+    min-font-size: 20px; /* 最小フォントサイズを20pxに設定 */
+    line-height: 1.6; /* 行間を調整して読みやすく */
+    margin: 20px 0; /* 上下の余白を追加 */
+    text-align: justify; /* テキストを両端揃えに */
+}
+
+/* レスポンシブビデオのスタイル */
+.responsive-video {
+    width: 100%;
+    max-width: 700px; /* PC時の最大幅を700pxに設定 */
+    height: auto; /* 自動で高さを調整 */
+    max-height: 400px; /* PCとタブレット用に高さを制限 */
+    margin: 0 auto;
+}
+
+/* スマホ用にビデオのサイズを調整 */
+@media (max-width: 480px) {
+    .responsive-video {
+        width: 90%; /* スマホ用に幅を縮小 */
+        max-width: 350px; /* スマホ時の最大幅を350pxに設定 */
+        margin-bottom: 20px;
+    }
+
+    .Discord_Description,
+    .Line_Description {
+        font-size: 4vw; /* スマホ用にテキストを少し大きく */
+        max-font-size: 24px; /* 最大フォントサイズを24pxに設定 */
+    }
+}
+
+/* タブレット用にテキストとビデオのサイズを調整 */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .responsive-video {
+        width: 600%; /* タブレット用に幅を画面の横半分に設定 */
+        max-width: 400px; /* 最大幅を500pxに制限 */
+        max-height: 400px; /* タブレット用に高さを調整 */
+    }
+
+    .Button {
+        font-size: 22px; /* ボタンのフォントサイズをタブレット用に少し大きく */
+        padding: 25px 35px; /* パディングを増やしてボタンを大きく */
+        max-width: 500px; /* タブレット画面に合わせたボタンの幅 */
+    }
+}
+
+/* PC用のテキストとボタンスタイルの調整 */
+@media (min-width: 1025px) {
+    .Button {
+        font-size: 26px; /* ボタンのフォントサイズをPC用にさらに大きく */
+        padding: 30px 40px; /* パディングを大きくしてボタンを目立たせる */
+        max-width: 600px; /* PC画面に合わせたボタンの幅 */
+    }
+
+    .responsive-video {
+        width: 600%; /* タブレット用に幅を画面の横半分に設定 */
+        max-width: 700px; /* 最大幅を500pxに制限 */
+        max-height: 600px; /* PC用にビデオの高さを調整 */
+    }
+}
+
+.footer-text {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #f8f8f8; /* 必要に応じて背景色を設定 */
+    padding: 10px 0;
+  }
+  
